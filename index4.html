@@ -1,0 +1,477 @@
+<html>
+    <head></head>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            overflow-x: hidden;
+        }
+        h2{
+            display:inline;
+            margin-top:20px;
+        }
+#one{
+         
+           margin-left:490px;
+          
+         
+        }
+        i{
+            padding-left:15px;
+            display: inline;
+        }
+        h4{
+            display: inline;
+            padding-left:10px;
+        }
+        #left{
+            margin-left:250px;
+        }
+        #move{
+            margin-left:670px;
+            top:50px;
+        }
+        #ooo{
+           width:100%;
+           height:20px;
+           background-color: sandybrown;
+           color:white;
+           margin-top:50px;
+        }
+        div.scroll-container {
+  background-color: #333;
+  overflow:auto;
+  white-space: nowrap;
+ scrollbar-width: none;
+ 
+}
+  #pic{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+
+  div::-webkit-scrollbar{
+     display: none;
+  }
+h4{
+    line-height: 30px;
+}
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin-top: 100px;
+  margin-left:100px;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+  border-radius: 20px;
+
+  
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+.hero__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+ 
+}
+#video{
+  border-radius:22px;
+  overflow:hidden;
+  margin-top:15px;
+}
+/*.hide {
+  display: none;
+}
+
+.lo:hover + .hide {
+  display: block;
+  color: red;
+}*/
+.container3,.container2,.container4,.container5,.container6,.container7{
+ display:inline-block;
+  width: 150px;
+  margin-left:80px;
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image1,.image,.image2,.image3,.image4,.image5 {
+  width: 150px;
+  height: 150px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay1,.overlay,.overlay2,.overlay3,.overlay4,.overlay5{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+  transition: .3s ease;
+  
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.container2:hover .overlay ,.container3:hover .overlay1,.container4:hover .overlay2,.container5:hover .overlay3,.container6:hover .overlay4,.container7:hover .overlay5{
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon,.icon1,.icon2,.icon3,.icon4,.icon5{
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background: transparent;
+}
+#louis{
+  display: none;
+
+}
+
+
+
+#louis:hover{
+     padding:0px;
+     margin:0px;
+ 
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eeeeeee9;
+}
+p{
+  justify-content:space-evenly;
+}
+
+#popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 15px #bcbcbc,
+                  -5px -5px 15px #ffffff;
+        z-index: 9999;
+       
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      #popup1 {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background-color:rgb(12, 6, 6);
+        padding: 10px;
+        
+        z-index: 9999;
+        
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      .pop {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+ 
+      .pop1 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      
+  
+    </style>
+    <script>
+        function showall() {
+     document.getElementById('popup5').style.display = 'block';
+ }
+
+ function closePopup5() {
+     document.getElementById('popup5').style.display = 'none';
+ }
+ function showall1() {
+     document.getElementById('popup1').style.display = 'block';
+ }
+
+ function closePopup1() {
+     document.getElementById('popup1').style.display = 'none';
+ }
+    
+
+     
+   </script>
+    <body>
+<h2>FROZEN <br>BOTTLE</h2>
+<h4 id="left" style="color:orange;" onmouseover="showall()">LUBOV PATISSERIE
+<div  style="width:200px;height:200px;" id="popup5" class="pop" onmouseout="closePopup5()" >
+    <a href="index3.html" style="text-decoration: none;color:orange;"> <p>Celebration Cakes</p></a>
+        <a href="index4.html" style="text-decoration: none;color:orange;"> <p>Signature Desserts</p></a>
+            <a href="index5.html" style="text-decoration: none;color:orange;"><p>Macrons</p></a>
+  
+                <a href="index6.html" style="text-decoration: none;color:orange;"><p>Customized cake</p></a>
+ 
+</div></h4>
+<h4  onmouseover="showall1()">PRODUCTS
+  <div  style="width:200px;height:200px;" id="popup1" class="pop1" onmouseout="closePopup1()" >
+    <a href="index7.html" style="text-decoration: none;color:orange;"> <p>Mocktails</p></a>
+    <a href="waffles.html" style="text-decoration: none;color:orange;"> <p>Waffles</p></a>
+    
+
+        <a href="maggiee.html" style="text-decoration: none;color:orange;"> <p>Maggie & Pasta</p></a>
+  
+          <a href="coffee.html" style="text-decoration: none;color:orange;"> <p>Cold Coffee</p></a>
+   
+  </div>
+</h4>
+
+<a href="index2.html" style="text-decoration:none;"> <h4 style="color:green;">OUR BRANDS</h4></a>
+<a href="franchise.html" style="text-decoration:none;"> <h4 style="color:white;">FRANCHISE</h4></a>
+<i class="fa fa-search" id="one"></i>
+<i class="fa fa-bars" id="two"></i>
+<i class="fa fa-shopping-bag"></i>
+<div id="ooo">
+    <center>Order Now</center>
+</div>
+<p>Nothing says Celebration like a Cake. We at Lubov, specialise in delicious cakes that are rich and flavourful. Let our Cakes take centre stage at your next celebration.</p>
+<div class="container">
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/Darkchocolatehalfmoonpastry_360x.jpg?v=1714737619"style="margin-left:10px" >
+      </div>
+      <div class="content">
+        <div>
+          
+          <p>Price:990
+          </p>
+          <h1 style="color:black;">Fresh Mango Gateau</h1>
+        </div>
+      </div>
+      
+    </div>
+   
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpmir1wYgD9x8baTpOjRTeeNOqosRRx5n7meH7-drNhhMVr_krjZAyQ0zzNHvO6Nilr7M&usqp=CAU" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+          <p>Price:900
+          </p>
+          <h1 style="color:black;">Hazelnut Praline Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://img.restaurantguru.com/rfce-Frozen-Bottle-Guwahati-dessert-2022-10-4.jpg" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+          
+          <p>Price:800
+          </p>
+          <h1 style="color:black;">Vennila and Berries Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtM2zQZGQo-LC7i9R2VWhHIWQnA0ixzPpnSFegi1c88PaRQopvi6fPiGTD_6-mdEJtaRM&usqp=CAU" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+         
+          <p>Price:770
+          </p>
+          <h1 style="color:black;">Black Forest Cake</h1>
+        </div>
+      </div>
+    </div>
+   
+    
+  </div>
+  <hr>
+  <div style="display:inline-block;width:15%;height:15%;margin-top:20px;margin-left:30px;">
+    <p>REFUND/ CANCELLATION POLICY<br>
+      Privacy Policy<br>
+      Terms of Service<br>
+      FAQs<br>
+      Feedback<br>
+      Menu<br>
+      Blog<br>
+      Store Locator</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-left:80px;">
+    <p>HEADQUARTERS<br>
+
+      35, K.R.Colony, Krishna <br>Reddy Layout, Amarjyoti<br> Layout, Domlur, Bengaluru,<br> Karnataka 560071
+      
+      Career</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;padding-top:20px;margin-right:10px;">
+    <p>FRANCHISING ENQUIRY<br>
+
+      franchise@frozenbottle.in<br>
+      
+      +919108131660<br>
+      +916366870312<br>
+      
+      Corporate Inquiry<br>
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-right:50px;">
+    <p>COLLABORATION & PARTNERSHIP<br>
+
+      vipul@frozenbottle.in<br>
+      
+      Customer Care<br>
+      080-48669920<br>
+      Mon to Fri<br>
+      (10 AM - 6 PM)<br>
+      
+      +919108130460<br>
+      (For Cake and Customised Cake)
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;">
+    <p>SIGN UP AND SAVE<br>
+
+      Signup and Enjoy Extra Saving Drop your email and get special offers, and once-in-a-lifetime deals.
+      
+      
+      </p>
+  </div>
+    </body></html>
+
+
+

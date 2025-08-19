@@ -1,0 +1,451 @@
+<html>
+    <head></head>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            overflow-x: hidden;
+        }
+        h2{
+            display:inline;
+            margin-top:20px;
+        }
+#one{
+         
+           margin-left:490px;
+          
+         
+        }
+        i{
+            padding-left:15px;
+            display: inline;
+        }
+        h4{
+            display: inline;
+            padding-left:10px;
+        }
+        #left{
+            margin-left:250px;
+        }
+        #move{
+            margin-left:670px;
+            top:50px;
+        }
+        #ooo{
+           width:100%;
+           height:20px;
+           background-color: sandybrown;
+           color:white;
+           margin-top:50px;
+        }
+        div.scroll-container {
+  background-color: #333;
+  overflow:auto;
+  white-space: nowrap;
+ scrollbar-width: none;
+ 
+}
+  #pic{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+
+  div::-webkit-scrollbar{
+     display: none;
+  }
+h4{
+    line-height: 30px;
+}
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin-top: 20px;
+  margin-left:100px;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+  border-radius: 20px;
+
+  
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+.hero__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+ 
+}
+#video{
+  border-radius:22px;
+  overflow:hidden;
+  margin-top:15px;
+}
+/*.hide {
+  display: none;
+}
+
+.lo:hover + .hide {
+  display: block;
+  color: red;
+}*/
+.container3,.container2,.container4,.container5,.container6,.container7{
+ display:inline-block;
+  width: 150px;
+  margin-left:80px;
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image1,.image,.image2,.image3,.image4,.image5 {
+  width: 150px;
+  height: 150px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay1,.overlay,.overlay2,.overlay3,.overlay4,.overlay5{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+  transition: .3s ease;
+  
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.container2:hover .overlay ,.container3:hover .overlay1,.container4:hover .overlay2,.container5:hover .overlay3,.container6:hover .overlay4,.container7:hover .overlay5{
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon,.icon1,.icon2,.icon3,.icon4,.icon5{
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background: transparent;
+}
+#louis{
+  display: none;
+
+}
+
+
+
+#louis:hover{
+     padding:0px;
+     margin:0px;
+ 
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eeeeeee9;
+}
+p{
+  justify-content:space-evenly;
+}
+
+#popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 15px #bcbcbc,
+                  -5px -5px 15px #ffffff;
+        z-index: 9999;
+       
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      #popup1 {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background-color:rgb(12, 6, 6);
+        padding: 10px;
+        
+        z-index: 9999;
+        
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      .pop {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+ 
+      .pop1 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      
+  
+    </style>
+    <script>
+        function showall() {
+     document.getElementById('popup5').style.display = 'block';
+ }
+
+ function closePopup5() {
+     document.getElementById('popup5').style.display = 'none';
+ }
+ function showall1() {
+     document.getElementById('popup1').style.display = 'block';
+ }
+
+ function closePopup1() {
+     document.getElementById('popup1').style.display = 'none';
+ }
+    
+
+     
+   </script>
+    <body>
+<h2>FROZEN <br>BOTTLE</h2>
+<h4 id="left" style="color:orange;" onmouseover="showall()">LUBOV PATISSERIE
+<div  style="width:200px;height:200px;" id="popup5" class="pop" onmouseout="closePopup5()" >
+    <a href="index3.html" style="text-decoration: none;color:orange;"><p>Celebration Cakes</p></a>
+    <a href="index4.html" style="text-decoration: none;color:orange;"><p>Signature Desserts</p></a>
+    <a href="index5.html" style="text-decoration: none;color:orange;"><p>Macrons</p></a>
+  
+    <a href="index6.html" style="text-decoration: none;color:orange;"><p>Customized cake</p></a>
+ 
+</div></h4>
+<h4  onmouseover="showall1()">PRODUCTS
+  <div  style="width:200px;height:200px;" id="popup1" class="pop1" onmouseout="closePopup1()" >
+    <a href="index7.html" style="text-decoration: none;color:orange;"><p>Mocktails</p></a>
+      <a href="waffles.html" style="text-decoration: none;color:orange;"><p>Waffles</p></a>
+        <a href="maggiee.html" style="text-decoration: none;color:orange;"> <p>Maggie & Pasta</p></a>
+    
+          <a href="coffee.html" style="text-decoration: none;color:orange;"><p>Cold Coffee</p></a>
+   
+  </div>
+</h4>
+
+<a href="index2.html" style="text-decoration:none;"> <h4 style="color:green;">OUR BRANDS</h4></a>
+<a href="franchise.html" style="text-decoration:none;"> <h4 style="color:white;">FRANCHISE</h4></a>
+<i class="fa fa-search" id="one"></i>
+<i class="fa fa-bars" id="two"></i>
+<i class="fa fa-shopping-bag"></i>
+<div id="ooo">
+    <center>Order Now</center>
+</div>
+<center><h3 style="margin-top:50px;">Home/Our Brands</h3></center>
+<center><h1 style="margin-top:20px;">Our Brands</h1></center>
+<center><img src="data:image/png;base64,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"width="300px" height="300px"></center>
+<p style="font-size: larger;font-weight: 300;line-height:5cqmin;">Step into the mesmerising world of Ice cream Milkshakes and Desserts. Since its inception in Bangalore in the year 2017, Frozen Bottle has emerged into a pioneer Ice cream destination brand bringing the vision of its founders Mr. Arun Suvarna and Pranshul Yadav into life.<br>
+
+    With a growing presence in over 40 cities and over 180 outlets, Frozen Bottle has set to expand rapidly making sure it becomes a household name when it comes to Ice cream based desserts and Milkshakes.<br>
+    
+    Rich and delicious hand crafted milkshakes made with premium ice creams blended with signature flavours and fruits poured into a chilled glass bottle is where the concept of Frozen Bottle was born. From there, we take pride in using premium glass jars and bottles for all our products filled with the best Ice creams and desserts, ready to take you on a dessert journey like no other.<br>
+    
+    With every range of products, Frozen Bottle has been market leaders when it comes to innovation , flavour and quality. Be it the Iconic Gudbud jars which are a myriad of flavours and textures or the classic dessert jars which have premium ice creams and flavours and cakes, all loaded in it, every one of these products have been made thoughtfully for the ever changing Customer demands and Market trends.<br> 
+    
+    Throughout our growth, we have faithfully maintained our commitment to a 100% vegetarian offering, ensuring inclusivity for all our patrons.
+    
+    Our brand prioritizes customer needs and loyalty, ensuring high-quality and innovative products that reflect this commitment.<br>
+    
+    We are all set to capture the dessert scene in all its glory with our hearts set on our customers and serve memories for a lifetime</p>
+    
+    <center><img src="https://cdn.shopify.com/s/files/1/0611/5878/5188/files/2_2108fdb3-9c90-4fce-b595-e757d7842de5_480x480.png?v=1699210349" width="300px;"height=300px"></center>
+<p style="font-size: larger;font-weight: 300;line-height:5cqmin;">Madno emerges as a vibrant and delightful brand under the umbrella of House of Frozen Bottle, reviving the cherished childhood excitement of chasing after an ice cream cart filled with a plethora of flavors to savor. The essence of Madno is rooted in its name, which translates to 'beloved' in Urdu, encapsulating the profound affection people hold for ice cream and the blissful memories it conjures.<br>
+
+    The brand isn’t just about offering traditional ice cream; it's a celebration of innovation and creativity in the realm of frozen desserts. Madno is committed to reinventing the ice cream experience by introducing a tapestry of unique and unexpected flavor combinations, along with a selection of exotic ingredients that elevate the simple pleasure of ice cream to an extraordinary culinary adventure. Each flavor is meticulously crafted to ensure that every lick and scoop is an indulgence in pure, unadulterated joy.<br>
+    
+    Madno's approach to ice cream is playful and adventurous, encouraging consumers to explore their palates with offerings that are as whimsical as they are delicious. The brand positions itself as a purveyor of happiness, a space where every visit promises a new discovery, and every dessert is a work of art, designed to delight the senses and bring a smile to faces.<br>
+    
+    By fusing the traditional with the avant-garde, Madno strives to be a beacon for ice cream enthusiasts, a place where the nostalgia of the past blends seamlessly with the innovative spirit of the present. It's not just about satisfying a craving; it's about creating an experience that resonates with the inner child in everyone, reminding us of the simple joy that a frozen treat on a sunny day can bring. This is the mission and vision of Madno, to be the beloved brand that keeps the spirit of summer alive all year round.</p>
+     <center><img src="https://cdn.shopify.com/s/files/1/0611/5878/5188/files/Website_480x480.png?v=1699365259" width=300px height=300px></center>
+   <p style="font-size: larger;font-weight: 300;line-height:5cqmin;">The joy and happiness surrounded around gifting is what led to the inception of Lubov. “Lubov” , derived from the Slavic which stands for Love, reflects in all our creations. The love for fresh and flavourful ingredients , the love for delicious and unique flavour combinations and the love for everything made from scratch is what is encapsulated in every little box of desserts we make. We take pride in being 100% Vegetarian making our desserts a year long treat! <br>
+
+    Meet Sandhya Parthasarathy, her innovative recipes have shaped Frozen Bottle from its inception and now she is instrumental in bringing Lubov's delights to life.<br>
+    
+    Her finesse and artisanship have been widely sought after and she has consulted many marquee FMCG and food brands for their various product development initiatives. As head of Product Development and Innovation at Munchbox Foodtech, she has been instrumental in constantly evolving the Menu and Product line to popular dessert trends.<br>
+    
+    All our bakes are made straight from the heart with utmost care giving complete attention to the ingredients and the flavours, so that your loved ones can experience the pure bliss while indulging in our bakes.Each of our product is made fresh ensuring nothing but the best leaves our kitchen. All products are quality checked for perfection not just in terms of the aesthetics but also in texture and flavour.</p>
+
+    <hr>
+    <div style="display:inline-block;width:15%;height:15%;margin-top:20px;margin-left:30px;">
+      <p>REFUND/ CANCELLATION POLICY<br>
+        Privacy Policy<br>
+        Terms of Service<br>
+        FAQs<br>
+        Feedback<br>
+        Menu<br>
+        Blog<br>
+        Store Locator</p>
+    </div>
+    <div  style="display:inline-block;width:15%;height:15%;margin-left:80px;">
+      <p>HEADQUARTERS<br>
+
+        35, K.R.Colony, Krishna <br>Reddy Layout, Amarjyoti<br> Layout, Domlur, Bengaluru,<br> Karnataka 560071
+        
+        Career</p>
+    </div>
+    <div  style="display:inline-block;width:15%;height:15%;padding-top:20px;margin-right:10px;">
+      <p>FRANCHISING ENQUIRY<br>
+
+        franchise@frozenbottle.in<br>
+        
+        +919108131660<br>
+        +916366870312<br>
+        
+        Corporate Inquiry<br>
+        </p>
+    </div>
+    <div  style="display:inline-block;width:15%;height:15%;margin-right:50px;">
+      <p>COLLABORATION & PARTNERSHIP<br>
+
+        vipul@frozenbottle.in<br>
+        
+        Customer Care<br>
+        080-48669920<br>
+        Mon to Fri<br>
+        (10 AM - 6 PM)<br>
+        
+        +919108130460<br>
+        (For Cake and Customised Cake)
+        </p>
+    </div>
+    <div  style="display:inline-block;width:15%;height:15%;">
+      <p>SIGN UP AND SAVE<br>
+
+        Signup and Enjoy Extra Saving Drop your email and get special offers, and once-in-a-lifetime deals.
+        
+        
+        </p>
+    </div>
+
+</body>
+</html>
+

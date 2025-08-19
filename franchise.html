@@ -1,0 +1,574 @@
+<html>
+    <head>
+        <title>
+            First
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            overflow-x: hidden;
+        }
+        h2{
+            display:inline;
+            margin-top:20px;
+        }
+#one{
+         
+           margin-left:490px;
+          
+         
+        }
+        i{
+            padding-left:15px;
+            display: inline;
+        }
+        h4{
+            display: inline;
+            padding-left:10px;
+        }
+        #left{
+            margin-left:250px;
+        }
+        #move{
+            margin-left:670px;
+            top:50px;
+        }
+        #ooo{
+           width:100%;
+           height:20px;
+           background-color: sandybrown;
+           color:white;
+           margin-top:50px;
+        }
+        div.scroll-container {
+  background-color: #333;
+  overflow:auto;
+  white-space: nowrap;
+ scrollbar-width: none;
+ 
+}
+.align--center {
+    align-self: center;
+    text-align: center;
+}
+.custom__item {
+    flex: 0 0 auto;
+    margin-bottom: 22px;
+    padding-left: 22px;
+    max-width: 100%;
+}
+.one-half {
+    width: 50;
+}
+*, :after, :before, input {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+  #pic{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+
+  div::-webkit-scrollbar{
+     display: none;
+  }
+h4{
+    line-height: 30px;
+}
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin-top: 20px;
+  margin-left:100px;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+  border-radius: 20px;
+
+  
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+.hero__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+ 
+}
+#video{
+  border-radius:22px;
+  overflow:hidden;
+  margin-top:15px;
+}
+/*.hide {
+  display: none;
+}
+
+.lo:hover + .hide {
+  display: block;
+  color: red;
+}*/
+.container3,.container2,.container4,.container5,.container6,.container7{
+ display:inline-block;
+  width: 150px;
+  margin-left:80px;
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image1,.image,.image2,.image3,.image4,.image5 {
+  width: 150px;
+  height: 150px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay1,.overlay,.overlay2,.overlay3,.overlay4,.overlay5{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+  transition: .3s ease;
+  
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.container2:hover .overlay ,.container3:hover .overlay1,.container4:hover .overlay2,.container5:hover .overlay3,.container6:hover .overlay4,.container7:hover .overlay5{
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon,.icon1,.icon2,.icon3,.icon4,.icon5{
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background: transparent;
+}
+#louis{
+  display: none;
+
+}
+
+
+
+#louis:hover{
+     padding:0px;
+     margin:0px;
+ 
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eeeeeee9;
+}
+p{
+  justify-content:space-evenly;
+}
+
+#popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 15px #bcbcbc,
+                  -5px -5px 15px #ffffff;
+        z-index: 9999;
+       
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      #popup1 {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background-color:rgb(12, 6, 6);
+        padding: 10px;
+        
+        z-index: 9999;
+        
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      .pop {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+ 
+      .pop1 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      
+  
+    </style>
+      <script>
+           function showall() {
+        document.getElementById('popup5').style.display = 'block';
+    }
+
+    function closePopup5() {
+        document.getElementById('popup5').style.display = 'none';
+    }
+    function showall1() {
+        document.getElementById('popup1').style.display = 'block';
+    }
+
+    function closePopup1() {
+        document.getElementById('popup1').style.display = 'none';
+    }
+       
+   
+        
+      </script>
+    <body>
+       
+            <h2>FROZEN <br>BOTTLE</h2>
+            <h4 id="left" style="color:orange;" onmouseover="showall()">LUBOV PATISSERIE
+            <div  style="width:200px;height:200px;" id="popup5" class="pop" onmouseout="closePopup5()" >
+             <a href="index3.html" style="text-decoration: none;color:orange;"> <p>Celebration Cakes</p></a>
+             <a href="index4.html" style="text-decoration: none;color:orange;"><p>Signature Desserts</p></a>
+              <a href="index5.html" style="text-decoration: none;color:orange;"> <p>Macrons</p></a>
+              
+                <a href="index6.html" style="text-decoration: none;color:orange;"> <p>Customized cake</p></a>
+             
+            </div></h4>
+            <h4  onmouseover="showall1()">PRODUCTS
+              <div  style="width:200px;height:200px;" id="popup1" class="pop1" onmouseout="closePopup1()" >
+                <a href="index7.html" style="text-decoration: none;color:orange;"> <p>Mocktails</p></a>
+               <a href="waffles.html" style="text-decoration: none;color:orange;"> <p>Waffles</p></a>
+               
+          
+                   <a href="maggiee.html" style="text-decoration: none;color:orange;"> <p>Maggie & Pasta</p></a>
+             
+                     <a href="coffee.html" style="text-decoration: none;color:orange;"> <p>Cold Coffee</p></a>
+               
+              </div>
+            </h4>
+
+            <a href="index2.html" style="text-decoration:none;"> <h4 style="color:green;">OUR BRANDS</h4></a>
+<a href="franchise.html" style="text-decoration:none;"> <h4 style="color:white;">FRANCHISE</h4></a>
+            <i class="fa fa-search" id="one"></i>
+            <i class="fa fa-bars" id="two"></i>
+            <i class="fa fa-shopping-bag"></i>
+            <div id="ooo">
+                <center>STORE PICKUP is available on select products</center>
+            </div>
+            <img src="https://frozenbottle.com/cdn/shop/files/1320x580franchise_2.png?v=1696667167&width=1920" width="100%" height="600px">
+           <div style="display:inline-block;width:500px;height:500px;line-height:35px;margin-top: 20px; margin-left:100px;">
+            <p style="font-size:larger;margin-left: 20px;"><b>Why Franchise with Frozen Bottle?</b><br>
+
+                1.Flourish with our philosophy of empowering and developing new entrepreneurs.<br>
+                
+                2.Work across multiple Franchisee formats.<br>
+                
+                3.Emphatical partnership model (not solely for profiteering) for example, we waived off royalties and provided multiple concessions and support to franchisee partners during the COVID pandemic.<br>
+                
+                4. Low risk owing to lower initial Capital investment.<br>
+                
+                5. High return on capital with a faster payback period large Brand presence with strong consumer recall.<br>
+                
+                6.Seamless operations with tech-driven backend integrations.<br>
+                
+                7. End-to-end support across functions</p>
+           </div>
+    <div style="display: inline-block;height:600px;width:600px;margin-left:50px">
+        <div class="custom__item small--one-whole one-half align--center" style="display: inline;">
+            <div class="custom__item-inner custom__item-inner--liquid"><div class="rte">
+                      <style>
+          .inputboxenter {
+              background-color: transparent;
+              border: 0;
+              border-bottom: 1px solid #dddddd;
+              border-radius: 0;
+              box-shadow: none;
+              font-size: 14px;
+              font-weight: normal;
+              margin: auto auto 15px auto;
+              transition: all ease-in-out 0.4s;
+              width: 45%;
+              height: 55px;
+              color:#ffffff;
+          }
+      
+          input:focus {
+              border: 0;
+              border-bottom: 1px solid #dddddd;
+              outline: 0;
+          }
+      
+          select:focus {
+              border: 0;
+              border-bottom: 1px solid #dddddd;
+              outline: 0;
+              color:black;
+          }
+      
+          textarea:focus {
+              border: 0;
+              border-bottom: 1px solid #dddddd;
+              outline: 0;
+          }
+      
+          .franchiseFormSection {
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+          }
+      .formButton {
+          width: 95%;
+          background: rgb(7 7 7);
+          border-radius: 0;
+          border: 1px solid #fff;
+          color: #f6f6f6;
+          font-weight: bold;
+          height: 50px;
+          box-shadow: none;
+          font-size: 14px;
+          margin: 20px auto 15px auto;
+          transition: all ease-in-out 0.4s;
+      }
+      
+          @media only screen and (max-width: 520px) {
+              .franchiseFormSection {
+                  display: flex;
+                  flex-direction: column;
+              }
+      
+              .inputboxenter {
+                  width: 95%
+              }
+          }
+      </style>
+      <div><form method="post" action="index.php" accept-charset="UTF-8" class="contact-form" data-cptcha="true" data-recaptcha-bound="true"><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓">
+          <div class="franchiseForm">
+              <div class="franchiseFormSection">
+                  <input id="ContactFormName-template--15937554579620__1663059743ee77d222" type="text" placeholder="Full Name*" name="name" class="inputboxenter" value="" required="" autocorrect="off" autocapitalize="off" fdprocessedid="bo2k8q">
+                  <input id="ContactFormPhone-template--15937554579620__1663059743ee77d222" type="tel" placeholder="Phone*" name="phone" class="inputboxenter" value="" required="" autocorrect="off" autocapitalize="off" fdprocessedid="1wwgoo">
+              </div>
+              <div class="franchiseFormSection">
+                  <input id="ContactFormEmail-template--15937554579620__1663059743ee77d222" type="text" placeholder="Email address*" name="email" class="inputboxenter" value="" required="" autocorrect="off" autocapitalize="off" fdprocessedid="26a2p">
+                  <input id="ContactFormState-template--15937554579620__1663059743ee77d222" type="text" placeholder="State*" name="state" class="inputboxenter" value="" required="" autocorrect="off" autocapitalize="off" fdprocessedid="nbyu6c">
+              </div>
+              <div class="franchiseFormSection">
+                  <input id="ContactFormCity-template--15937554579620__1663059743ee77d222" type="text" placeholder="City*" name="contact[city]" class="inputboxenter" value="" required="" autocorrect="off" autocapitalize="off" fdprocessedid="z6ayak">
+                  <input id="ContactFormZip-template--15937554579620__1663059743ee77d222" type="text" placeholder="Zip*" name="contact[zip]" class="inputboxenter" value="" required="" autocorrect="off" autocapitalize="off" fdprocessedid="orhrb">
+              </div>
+              <div class="franchiseFormSection">
+                  <select id="ContactFormProperty-template--15937554579620__1663059743ee77d222" name="contact[property]" value="" class="inputboxenter" fdprocessedid="as4l02">
+                      <option>Property Type</option>
+                      <option value="Rented">Rented</option>
+                      <option value="Owned">Owned</option>
+                  </select>
+                  <input id="ContactFormWork-template--15937554579620__1663059743ee77d222" type="text" placeholder="How did You Know About Frozen Bottle" name="contact[work]" class="inputboxenter" value="" autocorrect="off" autocapitalize="off" fdprocessedid="uw2z3j">
+              </div>
+              <div class="franchiseFormSection">
+                  <select id="ContactFormForzen-template--15937554579620__1663059743ee77d222" name="contact[forzen]" class="inputboxenter" style="width:95%" value="" fdprocessedid="3kfnwp">
+                      <option>Invested Planned For Frozen Bottle</option>
+                      <option value="10-15 Lakh">10-15 Lakh</option>
+                      <option value="15-20 Lakh">15-20 Lakh</option>
+                      <option value="20-25 Lakh">20-25 Lakh</option>
+                  </select>
+              </div>
+              <div class="franchiseFormSection">
+                  <textarea id="ContactFormMessage-template--15937554579620__1663059743ee77d222" class="inputboxenter" rows="6" style="width:95%" name="contact[message]" placeholder="Add Note" value=""></textarea>
+              </div>
+          </div>
+          <div class="franchiseFormSection">
+              <button type="submit" class="formButton" fdprocessedid="2qkzq9">
+                  Send
+              </button>
+          </div></form></div>
+                    </div></div>
+          </div>
+    </div>
+    <hr>
+  <div style="display:inline-block;width:15%;height:15%;margin-top:20px;margin-left:30px;">
+    <p>REFUND/ CANCELLATION POLICY<br>
+      Privacy Policy<br>
+      Terms of Service<br>
+      FAQs<br>
+      Feedback<br>
+      Menu<br>
+      Blog<br>
+      Store Locator</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-left:80px;">
+    <p>HEADQUARTERS<br>
+
+      35, K.R.Colony, Krishna <br>Reddy Layout, Amarjyoti<br> Layout, Domlur, Bengaluru,<br> Karnataka 560071
+      
+      Career</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;padding-top:20px;margin-right:10px;">
+    <p>FRANCHISING ENQUIRY<br>
+
+      franchise@frozenbottle.in<br>
+      
+      +919108131660<br>
+      +916366870312<br>
+      
+      Corporate Inquiry<br>
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-right:50px;">
+    <p>COLLABORATION & PARTNERSHIP<br>
+
+      vipul@frozenbottle.in<br>
+      
+      Customer Care<br>
+      080-48669920<br>
+      Mon to Fri<br>
+      (10 AM - 6 PM)<br>
+      
+      +919108130460<br>
+      (For Cake and Customised Cake)
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;">
+    <p>SIGN UP AND SAVE<br>
+
+      Signup and Enjoy Extra Saving Drop your email and get special offers, and once-in-a-lifetime deals.
+      
+      
+      </p>
+  </div>
+        </body>
+    </html>

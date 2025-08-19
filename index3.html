@@ -1,0 +1,580 @@
+<html>
+    <head></head>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            overflow-x: hidden;
+        }
+        h2{
+            display:inline;
+            margin-top:20px;
+        }
+#one{
+         
+           margin-left:490px;
+          
+         
+        }
+        i{
+            padding-left:15px;
+            display: inline;
+        }
+        h4{
+            display: inline;
+            padding-left:10px;
+        }
+        #left{
+            margin-left:250px;
+        }
+        #move{
+            margin-left:670px;
+            top:50px;
+        }
+        #ooo{
+           width:100%;
+           height:20px;
+           background-color: sandybrown;
+           color:white;
+           margin-top:50px;
+        }
+        div.scroll-container {
+  background-color: #333;
+  overflow:auto;
+  white-space: nowrap;
+ scrollbar-width: none;
+ 
+}
+  #pic{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+
+  div::-webkit-scrollbar{
+     display: none;
+  }
+h4{
+    line-height: 30px;
+}
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin-top: 100px;
+  margin-left:100px;
+
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+  border-radius: 20px;
+
+  
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+.hero__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+ 
+}
+#video{
+  border-radius:22px;
+  overflow:hidden;
+  margin-top:15px;
+}
+/*.hide {
+  display: none;
+}
+
+.lo:hover + .hide {
+  display: block;
+  color: red;
+}*/
+.container3,.container2,.container4,.container5,.container6,.container7{
+ display:inline-block;
+  width: 150px;
+  margin-left:80px;
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image1,.image,.image2,.image3,.image4,.image5 {
+  width: 150px;
+  height: 150px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay1,.overlay,.overlay2,.overlay3,.overlay4,.overlay5{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+  transition: .3s ease;
+  
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.container2:hover .overlay ,.container3:hover .overlay1,.container4:hover .overlay2,.container5:hover .overlay3,.container6:hover .overlay4,.container7:hover .overlay5{
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon,.icon1,.icon2,.icon3,.icon4,.icon5{
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background: transparent;
+}
+#louis{
+  display: none;
+
+}
+
+
+
+#louis:hover{
+     padding:0px;
+     margin:0px;
+ 
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eeeeeee9;
+}
+p{
+  justify-content:space-evenly;
+}
+
+#popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 15px #bcbcbc,
+                  -5px -5px 15px #ffffff;
+        z-index: 9999;
+       
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      #popup1 {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background-color:rgb(12, 6, 6);
+        padding: 10px;
+        
+        z-index: 9999;
+        
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      .pop {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+ 
+      .pop1 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      
+  
+    </style>
+    <script>
+        function showall() {
+     document.getElementById('popup5').style.display = 'block';
+ }
+
+ function closePopup5() {
+     document.getElementById('popup5').style.display = 'none';
+ }
+ function showall1() {
+     document.getElementById('popup1').style.display = 'block';
+ }
+
+ function closePopup1() {
+     document.getElementById('popup1').style.display = 'none';
+ }
+    
+
+     
+   </script>
+    <body>
+<h2>FROZEN <br>BOTTLE</h2>
+<h4 id="left" style="color:orange;" onmouseover="showall()">LUBOV PATISSERIE
+<div  style="width:200px;height:200px;" id="popup5" class="pop" onmouseout="closePopup5()" >
+    <a href="index3.html" style="text-decoration: none;color:orange;"><p >Celebration Cakes</p></a>
+        <a href="index4.html" style="text-decoration: none;color:orange;"><p>Signature Desserts</p></a>
+            <a href="index5.html" style="text-decoration: none;color:orange;"><p>Macrons</p></a>
+  
+                <a href="index6.html" style="text-decoration: none;color:orange;"><p>Customized cake</p></a>
+ 
+</div></h4>
+<h4  onmouseover="showall1()">PRODUCTS
+  <div  style="width:200px;height:200px;" id="popup1" class="pop1" onmouseout="closePopup1()" >
+    <a href="index7.html" style="text-decoration: none;color:orange;"> <p>Mocktails</p></a>
+    <a href="waffles.html" style="text-decoration: none;color:orange;"> <p>Waffles</p></a>
+    
+
+        <a href="maggiee.html" style="text-decoration: none;color:orange;"> <p>Maggie & Pasta</p></a>
+  
+          <a href="coffee.html" style="text-decoration: none;color:orange;"> <p>Cold Coffee</p></a>
+   
+  </div>
+</h4>
+
+<a href="index2.html" style="text-decoration:none;"> <h4 style="color:green;">OUR BRANDS</h4></a>
+<a href="franchise.html" style="text-decoration:none;"> <h4 style="color:white;">FRANCHISE</h4></a>
+<i class="fa fa-search" id="one"></i>
+<i class="fa fa-bars" id="two"></i>
+<i class="fa fa-shopping-bag"></i>
+<div id="ooo">
+    <center>Order Now</center>
+</div>
+<p>Nothing says Celebration like a Cake. We at Lubov, specialise in delicious cakes that are rich and flavourful. Let our Cakes take centre stage at your next celebration.</p>
+<div class="container">
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/MangoCake1_360x.jpg?v=1712819587"style="margin-left:10px" >
+      </div>
+      <div class="content">
+        <div>
+          
+          <p>Price:990
+          </p>
+          <h1 style="color:black;">Fresh Mango Gateau</h1>
+        </div>
+      </div>
+      
+    </div>
+   
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/HazelnutPralineCake_360x.png?v=1687155060" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+          <p>Price:900
+          </p>
+          <h1 style="color:black;">Hazelnut Praline Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/VanillaBeanandBerriesCake_1e4c24e8-7d45-48f7-bdca-1bc8a57ffcfb_360x.jpg?v=1687159877" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+          
+          <p>Price:800
+          </p>
+          <h1 style="color:black;">Vennila and Berries Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/BlackForestCake.png?v=1687155007" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+         
+          <p>Price:770
+          </p>
+          <h1 style="color:black;">Black Forest Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/MixedFruitCake_1024x1024.png?v=1687155089">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:990
+          </p>
+          <h1 style="color:black;">Mixed Fruit Gateu Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/RoseSaffronandPistachioCake_1024x1024.png?v=1694172924">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:1000
+          </p>
+          <h1 style="color:black;">Rose Saffron</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/DarkChocolateandBerriesCake_1400x.png?v=1687155031">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:860
+          </p>
+          <h1 style="color:black;">Dark Chocolate and Berries Cake</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/BerryBlastMacaronSundae.png?v=1699275494">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:900
+          </p>
+          <h1 style="color:black;">Berry Blast Macron Sundae</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="data:image/jpeg;base64,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">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:999
+          </p>
+          <h1 style="color:black;">Mango Kesar Macaron Sundae</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt19prodlp/products/p-divine-red-velvet-cake-1-kg--191975-m.jpg">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:950
+          </p>
+          <h1 style="color:black;">Nuuty Baklava Fusion Sundae</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://citydeal.s3.us-east-2.amazonaws.com/uploads/all/AtgKgOsBiDwH48XcFojR9mVZLUrKwh3uGolyO7NF.jpg">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:600
+          </p>
+          <h1 style="color:black;">Creamy Kunaffa Fusion Sundae</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7_yShs2T99dUEWk6FC1iKGVGojHYSS9-WKYWGOHOmcrcvjGSs5ZWzSvf0KwsLjHjDkus&usqp=CAU">
+      </div>
+      <div class="content">
+        <div>
+          
+          <p>Price:900
+          </p>
+          <h1 style="color:black;">Kitkat Orea Milkshake</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div style="display:inline-block;width:15%;height:15%;margin-top:20px;margin-left:30px;">
+    <p>REFUND/ CANCELLATION POLICY<br>
+      Privacy Policy<br>
+      Terms of Service<br>
+      FAQs<br>
+      Feedback<br>
+      Menu<br>
+      Blog<br>
+      Store Locator</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-left:80px;">
+    <p>HEADQUARTERS<br>
+
+      35, K.R.Colony, Krishna <br>Reddy Layout, Amarjyoti<br> Layout, Domlur, Bengaluru,<br> Karnataka 560071
+      
+      Career</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;padding-top:20px;margin-right:10px;">
+    <p>FRANCHISING ENQUIRY<br>
+
+      franchise@frozenbottle.in<br>
+      
+      +919108131660<br>
+      +916366870312<br>
+      
+      Corporate Inquiry<br>
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-right:50px;">
+    <p>COLLABORATION & PARTNERSHIP<br>
+
+      vipul@frozenbottle.in<br>
+      
+      Customer Care<br>
+      080-48669920<br>
+      Mon to Fri<br>
+      (10 AM - 6 PM)<br>
+      
+      +919108130460<br>
+      (For Cake and Customised Cake)
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;">
+    <p>SIGN UP AND SAVE<br>
+
+      Signup and Enjoy Extra Saving Drop your email and get special offers, and once-in-a-lifetime deals.
+      
+      
+      </p>
+  </div>
+    </body></html>
+
+
+

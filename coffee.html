@@ -1,0 +1,490 @@
+<html>
+    <head></head>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+            overflow-x: hidden;
+        }
+        h2{
+            display:inline;
+            margin-top:20px;
+        }
+#one{
+         
+           margin-left:490px;
+          
+         
+        }
+        i{
+            padding-left:15px;
+            display: inline;
+        }
+        h4{
+            display: inline;
+            padding-left:10px;
+        }
+        #left{
+            margin-left:250px;
+        }
+        #move{
+            margin-left:670px;
+            top:50px;
+        }
+        #ooo{
+           width:100%;
+           height:20px;
+           background-color: sandybrown;
+           color:white;
+           margin-top:50px;
+        }
+        div.scroll-container {
+  background-color: #333;
+  overflow:auto;
+  white-space: nowrap;
+ scrollbar-width: none;
+ 
+}
+  #pic{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 5px;
+  }
+
+  div::-webkit-scrollbar{
+     display: none;
+  }
+h4{
+    line-height: 30px;
+}
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin-top: 100px;
+  margin-left:100px;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+  border-radius: 20px;
+
+  
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f00,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+.hero__media {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+ 
+}
+#video{
+  border-radius:22px;
+  overflow:hidden;
+  margin-top:15px;
+}
+/*.hide {
+  display: none;
+}
+
+.lo:hover + .hide {
+  display: block;
+  color: red;
+}*/
+.container3,.container2,.container4,.container5,.container6,.container7{
+ display:inline-block;
+  width: 150px;
+  margin-left:80px;
+  position: relative;
+}
+
+/* Make the image to responsive */
+.image1,.image,.image2,.image3,.image4,.image5 {
+  width: 150px;
+  height: 150px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay1,.overlay,.overlay2,.overlay3,.overlay4,.overlay5{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+  transition: .3s ease;
+  
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.container2:hover .overlay ,.container3:hover .overlay1,.container4:hover .overlay2,.container5:hover .overlay3,.container6:hover .overlay4,.container7:hover .overlay5{
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon,.icon1,.icon2,.icon3,.icon4,.icon5{
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background: transparent;
+}
+#louis{
+  display: none;
+
+}
+
+
+
+#louis:hover{
+     padding:0px;
+     margin:0px;
+ 
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eeeeeee9;
+}
+p{
+  justify-content:space-evenly;
+}
+
+#popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 5px 15px #bcbcbc,
+                  -5px -5px 15px #ffffff;
+        z-index: 9999;
+       
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      #popup1 {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        background-color:rgb(12, 6, 6);
+        padding: 10px;
+        
+        z-index: 9999;
+        
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      .pop {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+ 
+      .pop1 {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        background-color:black;
+        padding: 10px;
+        width:500px;
+        height:500px;
+       color:orange;
+      background-repeat: no-repeat;
+      background-size: cover;
+     
+      }
+      
+  
+    </style>
+    <script>
+        function showall() {
+     document.getElementById('popup5').style.display = 'block';
+ }
+
+ function closePopup5() {
+     document.getElementById('popup5').style.display = 'none';
+ }
+ function showall1() {
+     document.getElementById('popup1').style.display = 'block';
+ }
+
+ function closePopup1() {
+     document.getElementById('popup1').style.display = 'none';
+ }
+    
+
+     
+   </script>
+    <body>
+<h2>FROZEN <br>BOTTLE</h2>
+<h4 id="left" style="color:orange;" onmouseover="showall()">LUBOV PATISSERIE
+<div  style="width:200px;height:200px;" id="popup5" class="pop" onmouseout="closePopup5()" >
+    <a href="index3.html" style="text-decoration: none;color:orange;"><p>Celebration Cakes</p></a>
+        <a href="index4.html" style="text-decoration: none;color:orange;"> <p>Signature Desserts</p></a>
+            <a href="index5.html" style="text-decoration: none;color:orange;"><p>Macrons</p></a>
+  
+                <a href="index6.html" style="text-decoration: none;color:orange;"><p>Customized cake</p></a>
+ 
+</div></h4>
+<h4  onmouseover="showall1()">PRODUCTS
+  <div  style="width:200px;height:200px;" id="popup1" class="pop1" onmouseout="closePopup1()" >
+    <a href="index7.html" style="text-decoration: none;color:orange;"> <p>Mocktails</p></a>
+    <a href="waffles.html" style="text-decoration: none;color:orange;"> <p>Waffles</p></a>
+    
+
+        <a href="maggiee.html" style="text-decoration: none;color:orange;"> <p>Maggie & Pasta</p></a>
+  
+          <a href="coffee.html" style="text-decoration: none;color:orange;"> <p>Cold Coffee</p></a>
+   
+  </div>
+</h4>
+
+<a href="index2.html" style="text-decoration:none;"> <h4 style="color:green;">OUR BRANDS</h4></a>
+<a href="franchise.html" style="text-decoration:none;"> <h4 style="color:white;">FRANCHISE</h4></a>
+<i class="fa fa-search" id="one"></i>
+<i class="fa fa-bars" id="two"></i>
+<i class="fa fa-shopping-bag"></i>
+<div id="ooo">
+    <center>Order Now</center>
+</div>
+<p>Nothing says Celebration like a Cake. We at Lubov, specialise in delicious cakes that are rich and flavourful. Let our Cakes take centre stage at your next celebration.</p>
+<div class="container">
+    <div class="box">
+      <div class="imgBx">
+        <img src="data:image/jpeg;base64,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" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+          
+          <p>Price:800
+          </p>
+          <h1 style="color:black;">Classic Cold Coffee</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/ChocoHazelnut_720x.png?v=1699205343"  style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+         
+          <p>Price:770
+          </p>
+          <h1 style="color:black;">Choco cold coffee</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img src="https://frozenbottle.com/cdn/shop/files/Caramel_7c69b2ba-17f2-4ab5-b9ce-96794ec1a295_720x.png?v=1699247856" style="margin-left:10px">
+      </div>
+      <div class="content">
+        <div>
+        
+          <p>Price:990
+          </p>
+          <h1 style="color:black;">Caramel cold coffee</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+        <div class="imgBx">
+          <img src="https://frozenbottle.com/cdn/shop/files/Mocha_5e45737b-d4e2-4305-849f-4763b09d546d_720x.png?v=1699248110"style="margin-left:10px">
+        </div>
+        <div class="content">
+          <div>
+          
+            <p>Price:790
+            </p>
+            <h1 style="color:black;">Mocha cold coffee</h1>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="https://frozenbottle.com/cdn/shop/files/Butterscotch_13619222-a444-4618-a3c6-8c0707bbb788_720x.png?v=1699247851"style="margin-left:10px">
+        </div>
+        <div class="content">
+          <div>
+          
+            <p>Price:970
+            </p>
+            <h1 style="color:black;">Butterskotch cold coffee</h1>
+          </div>
+        </div>
+      </div>
+
+   
+</div>
+
+  <hr>
+  <div style="display:inline-block;width:15%;height:15%;margin-top:20px;margin-left:30px;">
+    <p>REFUND/ CANCELLATION POLICY<br>
+      Privacy Policy<br>
+      Terms of Service<br>
+      FAQs<br>
+      Feedback<br>
+      Menu<br>
+      Blog<br>
+      Store Locator</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-left:80px;">
+    <p>HEADQUARTERS<br>
+
+      35, K.R.Colony, Krishna <br>Reddy Layout, Amarjyoti<br> Layout, Domlur, Bengaluru,<br> Karnataka 560071
+      
+      Career</p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;padding-top:20px;margin-right:10px;">
+    <p>FRANCHISING ENQUIRY<br>
+
+      franchise@frozenbottle.in<br>
+      
+      +919108131660<br>
+      +916366870312<br>
+      
+      Corporate Inquiry<br>
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;margin-right:50px;">
+    <p>COLLABORATION & PARTNERSHIP<br>
+
+      vipul@frozenbottle.in<br>
+      
+      Customer Care<br>
+      080-48669920<br>
+      Mon to Fri<br>
+      (10 AM - 6 PM)<br>
+      
+      +919108130460<br>
+      (For Cake and Customised Cake)
+      </p>
+  </div>
+  <div  style="display:inline-block;width:15%;height:15%;">
+    <p>SIGN UP AND SAVE<br>
+
+      Signup and Enjoy Extra Saving Drop your email and get special offers, and once-in-a-lifetime deals.
+      
+      
+      </p>
+  </div>
+    </body></html>
+
+
+
