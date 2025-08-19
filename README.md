@@ -57,7 +57,7 @@ These videos provide a walkthrough of the website and its features.
 
 Clone the repository:
 
-git clone https://github.com/your-username/Frozen-Bottle-project.git
+git clone https://github.com/Ha1r2i3n4i/Frozen-Bottle-project.git
 cd Frozen-Bottle-project-main
 
 
