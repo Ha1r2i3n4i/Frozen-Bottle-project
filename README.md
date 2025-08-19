@@ -1,7 +1,7 @@
 # Frozen-Bottle-project
 This project is a web-based application developed for the Frozen Bottle brand, showcasing their products, franchise details, and menu items with an interactive design.
 
-   #📌 Project Overview
+   📌 Project Overview
 
 The Frozen Bottle website is designed to provide:
 
@@ -11,7 +11,7 @@ Information about franchise opportunities.
 
 A visually appealing layout with images, videos, and smooth navigation.
 
-    #🛠️ Tech Stack
+    🛠️ Tech Stack
 
 Frontend: HTML5, CSS3
 
@@ -19,7 +19,7 @@ Backend: PHP (basic server-side scripting for handling pages)
 
 Media: Embedded MP4 demo videos & product images
 
-   #📂 Project Structure
+   📂 Project Structure
 
 index.html → Homepage with navigation
 
@@ -33,7 +33,7 @@ franchise.html → Franchise details page
 
 FROZEN BOTTLE.mp4 & other recordings → Demo videos of the project in action
 
-    #🚀 Features
+    🚀 Features
 
 ✅ Responsive website layout
 ✅ Multiple product pages (coffee, maggie, waffles, etc.)
@@ -41,7 +41,7 @@ FROZEN BOTTLE.mp4 & other recordings → Demo videos of the project in action
 ✅ Integrated images & video previews
 ✅ Easy navigation with a clean design
 
-    #🎥 Demo
+    🎥 Demo
 
 The repository includes demo videos:
 
@@ -53,7 +53,7 @@ Recording 2024-05-20 211341.mp4
 
 These videos provide a walkthrough of the website and its features.
 
-📌 How to Run
+     📌 How to Run
 
 Clone the repository:
 
@@ -71,7 +71,7 @@ php -S localhost:8000
 and open http://localhost:8000/index.php
 .
 
-   #💡 Future Enhancements
+   💡 Future Enhancements
 
 Add database integration for dynamic content
 
